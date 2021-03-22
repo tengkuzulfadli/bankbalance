@@ -1,0 +1,25 @@
+using System;
+
+namespace LabThreeFive
+{
+    public class Balance
+    {
+        static void Main(string[] args)
+        {
+            //double bankBal;
+            Console.WriteLine("How much is your bank account balance?");
+            double bankBal = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("What is the interest rate?");
+            double bankRate = Convert.ToDouble(Console.ReadLine());
+
+            double newBankRate = bankRate / 100; //To convert percentage to double
+
+            double newBal = (bankBal * newBankRate) + bankBal; //To get new bank balance
+
+            Console.WriteLine("Your current bank balance is : " + newBal);
+
+            Console.ReadKey();
+        }
+    }
+}
